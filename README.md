@@ -17,10 +17,10 @@ The links are as follows:
 
 - **Full HTML report (recommended entry point)**  
   A narrative, human-readable report with figures and interpretation:  
-  👉 <a href="https://github.com/ahsham/OER/blob/main/test.html" target="_blank">Extended analysis report (test.html)</a>
+  👉 <a href="https://ahsham.github.io/OER/test.html" target="_blank">Extended analysis report (test.html)</a>
 
 - **Raw numerical outputs and model results**  
   Regression tables, topic lists, summary stats, etc.:  
-  👉 <a href="https://github.com/ahsham/OER/blob/main/results.txt" target="_blank">Detailed results (results.txt)</a>
+  👉 <a href="https://ahsham.github.io/OERresults.txt" target="_blank">Detailed results (results.txt)</a>
 
 You can open `test.html` locally in a browser or serve it via GitHub Pages.
