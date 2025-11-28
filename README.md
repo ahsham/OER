@@ -21,6 +21,6 @@ The links are as follows:
 
 - **Raw numerical outputs and model results**  
   Regression tables, topic lists, summary stats, etc.:  
-  👉 <a href="https://github.com/ahsham/OER/blob/main/" target="_blank">Detailed results (results.txt)</a>
+  👉 <a href="https://github.com/ahsham/OER/blob/main/results.txt" target="_blank">Detailed results (results.txt)</a>
 
 You can open `test.html` locally in a browser or serve it via GitHub Pages.
