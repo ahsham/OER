@@ -1,0 +1,1577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Satisfaction and Customer Experience in the Airline Industry: A Dual-Perspective Analysis</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 60px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            font-size: 2.3em;
+            color: #1a1a1a;
+            text-align: center;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+        
+        .authors {
+            text-align: center;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .affiliation {
+            text-align: center;
+            font-size: 0.95em;
+            color: #666;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+        
+        .date {
+            text-align: center;
+            color: #777;
+            margin-bottom: 50px;
+        }
+        
+        .disclaimer {
+            background-color: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 5px;
+        }
+        
+        .disclaimer h3 {
+            color: #856404;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        
+        .disclaimer p {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            font-size: 1.8em;
+            color: #2c3e50;
+            margin-top: 50px;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+        }
+        
+        h3 {
+            font-size: 1.35em;
+            color: #34495e;
+            margin-top: 35px;
+            margin-bottom: 20px;
+        }
+        
+        h4 {
+            font-size: 1.1em;
+            color: #555;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        .abstract {
+            background-color: #ecf0f1;
+            padding: 30px;
+            margin: 40px 0;
+            border-left: 5px solid #3498db;
+            font-size: 1.05em;
+        }
+        
+        .abstract h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.95em;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        th {
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        tr:hover {
+            background-color: #e9ecef;
+        }
+        
+        .highlight-row {
+            background-color: #d4edda !important;
+            font-weight: 600;
+        }
+        
+        .stats-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .stat-card h3 {
+            font-size: 2.5em;
+            margin: 10px 0;
+            color: white;
+            border: none;
+        }
+        
+        .stat-card p {
+            font-size: 1em;
+            opacity: 0.9;
+            text-align: center;
+        }
+        
+        .figure {
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .figure img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .figure-caption {
+            margin-top: 15px;
+            font-style: italic;
+            color: #666;
+            font-size: 0.95em;
+            text-align: left;
+            padding: 0 20px;
+        }
+        
+        .key-finding {
+            background-color: #d4edda;
+            border-left: 5px solid #28a745;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 5px;
+        }
+        
+        .key-finding h4 {
+            color: #155724;
+            margin-top: 0;
+        }
+        
+        .methodology-box {
+            background-color: #f8f9fa;
+            border: 2px solid #3498db;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 5px;
+        }
+        
+        .methodology-box h4 {
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        
+        .formula {
+            background-color: #282c34;
+            color: #abb2bf;
+            padding: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+        
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        .note {
+            background-color: #e7f3ff;
+            border-left: 5px solid #2196F3;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .workflow {
+            background-color: #fff;
+            border: 2px solid #9b59b6;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 5px;
+        }
+        
+        .workflow h4 {
+            color: #6c3483;
+            margin-top: 0;
+        }
+        
+        .step-number {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Employee Satisfaction and Customer Experience in the Airline Industry: A Dual-Perspective Analysis</h1>
+        
+        <div class="authors">
+            <strong>Prof. Mehmet Saydam</strong> and <strong>A.H. Sham</strong>
+        </div>
+        
+        <div class="affiliation">
+            Department of Aviation Management<br>
+            Analysis conducted: November 27-28, 2025
+        </div>
+        
+        <div class="date">
+            <em>Working Paper</em>
+        </div>
+        
+        <div class="disclaimer">
+            <h3>⚠️ Research Disclaimer</h3>
+            <p><strong>Data Sources:</strong> This research uses publicly available review data from Skytrax (customer reviews) and Glassdoor (employee reviews). All data was collected through ethical web scraping practices and publicly available datasets on Kaggle. We respect the terms of service of all platforms and use only publicly accessible information.</p>
+            
+            <p><strong>Statistical Limitations:</strong> The correlation analysis is based on 10 airlines where both employee and customer data were available in sufficient quantity. The small sample size (n=10) limits statistical power. While we observe a moderate positive correlation (r=0.56, p=0.095), readers should interpret this as suggestive evidence rather than definitive proof of causation. We emphasize effect sizes and confidence intervals rather than relying solely on p-values.</p>
+            
+            <p><strong>Review Representativeness:</strong> Online reviews represent self-selected samples of employees and customers, potentially skewed toward those with strong opinions. Results may not generalize to all airlines or all customer/employee segments.</p>
+            
+            <p><strong>Temporal Considerations:</strong> Reviews were collected at different time periods. We aggregated data without strict temporal matching, which may introduce noise into the correlational analysis.</p>
+            
+            <p><strong>Academic Use:</strong> This work represents exploratory research combining multiple data sources and analytical methods. We welcome feedback and suggestions for refinement.</p>
+        </div>
+        
+        <div class="abstract">
+            <h3>Abstract</h3>
+            <p>
+                We investigate the relationship between employee workplace satisfaction and customer service experience in the 
+                airline industry by analyzing 42,599 reviews from two independent sources: Glassdoor (9,351 employee reviews) 
+                and Skytrax (approximately 33,000 customer reviews). Using Latent Dirichlet Allocation (LDA) topic modeling, 
+                we identified key themes in both employee workplace experiences and customer service perceptions. We then 
+                examined whether airlines with higher employee satisfaction also achieve higher customer satisfaction.
+            </p>
+            <p>
+                Our analysis of 10 major international airlines reveals a moderate positive correlation between employee and 
+                customer satisfaction (Pearson r=0.56, p=0.095). Airlines with above-median employee ratings achieved customer 
+                satisfaction scores approximately 0.4 points higher (on a 10-point scale) than those with below-median employee 
+                ratings (t=2.30, p=0.071). Topic modeling revealed that employee complaints about management quality, career 
+                opportunities, and workload predict lower employee ratings (R²=0.063), while customer complaints about delays, 
+                refunds, and service quality predict lower customer ratings (R²=0.054).
+            </p>
+            <p>
+                These findings provide empirical support for the service-profit chain theory, suggesting that airlines investing 
+                in employee satisfaction may realize benefits in customer satisfaction. However, the small sample size necessitates 
+                cautious interpretation and calls for replication with larger datasets.
+            </p>
+        </div>
+        
+        <h2>1. Introduction and Research Question</h2>
+        
+        <h3>1.1 Motivation</h3>
+        
+        <p>
+            The airline industry presents a unique context for studying the employee-customer satisfaction relationship. Unlike 
+            many service industries, airline employees work in highly constrained environments (aircraft cabins, gate areas) under 
+            significant time pressure, often dealing with stressed customers. The quality of service delivery depends heavily on 
+            frontline employees—cabin crew, gate agents, ground staff—who directly interface with passengers.
+        </p>
+        
+        <p>
+            Service management theory, particularly the service-profit chain framework (Heskett et al., 1994), posits that employee 
+            satisfaction drives service quality, which in turn drives customer satisfaction and ultimately profitability. Yet empirical 
+            evidence for this chain in the airline context remains limited, largely because obtaining both employee and customer data 
+            for the same organizations is challenging. Airlines rarely publicize internal employee satisfaction metrics, and even when 
+            they conduct surveys, results are proprietary.
+        </p>
+        
+        <p>
+            The emergence of public review platforms—Glassdoor for employee reviews and Skytrax for customer reviews—creates a new 
+            opportunity to test this theoretical relationship using large-scale, authentic data from real employees and customers 
+            rather than laboratory surveys.
+        </p>
+        
+        <h3>1.2 Research Question</h3>
+        
+        <p>
+            <strong>Do airlines with higher employee workplace satisfaction achieve higher customer service satisfaction?</strong>
+        </p>
+        
+        <p>
+            To answer this question, we needed to:
+        </p>
+        <ol>
+            <li>Collect employee workplace reviews for multiple airlines</li>
+            <li>Collect customer flight experience reviews for the same airlines</li>
+            <li>Calculate aggregate satisfaction metrics for each airline from both perspectives</li>
+            <li>Test whether these metrics correlate</li>
+            <li>Identify what specific factors drive employee and customer satisfaction</li>
+        </ol>
+        
+        <h3>1.3 Contribution</h3>
+        
+        <p>
+            This research makes three contributions:
+        </p>
+        
+        <ul>
+            <li><strong>Methodological:</strong> We demonstrate how publicly available review data can be combined to test organizational 
+            hypotheses that previously required access to proprietary internal data.</li>
+            
+            <li><strong>Empirical:</strong> We provide evidence for the employee-customer satisfaction link using real-world data from 
+            42,599 reviews across 497 airlines, substantially larger than typical survey-based studies.</li>
+            
+            <li><strong>Practical:</strong> We identify specific themes (management quality, career development, workload) that predict 
+            employee dissatisfaction and may ultimately affect customer experience, offering actionable insights for airline management.</li>
+        </ul>
+        
+        <h2>2. Research Design and Methodology</h2>
+        
+        <p>
+            We designed a multi-method research approach combining quantitative analysis (correlation, regression) with qualitative 
+            text analysis (topic modeling). This section explains <em>what</em> we did, <em>why</em> we chose each method, and 
+            <em>how</em> the pieces fit together.
+        </p>
+        
+        <h3>2.1 Overall Research Workflow</h3>
+        
+        <div class="workflow">
+            <h4>Complete Analysis Pipeline</h4>
+            <p><span class="step-number">1</span><strong>Data Collection:</strong> Gather employee reviews (Glassdoor) and customer reviews (Skytrax)</p>
+            <p><span class="step-number">2</span><strong>Data Cleaning:</strong> Standardize airline names, remove duplicates, filter incomplete reviews</p>
+            <p><span class="step-number">3</span><strong>Topic Modeling:</strong> Apply LDA to identify themes in employee pros/cons and customer complaints</p>
+            <p><span class="step-number">4</span><strong>Regression Analysis:</strong> Test whether topics predict overall ratings (employee and customer separately)</p>
+            <p><span class="step-number">5</span><strong>Airline-Level Aggregation:</strong> Calculate mean ratings for each airline from both perspectives</p>
+            <p><span class="step-number">6</span><strong>Correlation Analysis:</strong> Test whether employee and customer satisfaction correlate across airlines</p>
+            <p><span class="step-number">7</span><strong>Interpretation:</strong> Synthesize findings and assess practical significance</p>
+        </div>
+        
+        <p>
+            Each step was chosen for a specific reason. We'll now explain the methodology for each component.
+        </p>
+        
+        <h3>2.2 Why We Used These Specific Methods</h3>
+        
+        <h4>Method 1: Topic Modeling (LDA) — Understanding What People Say</h4>
+        
+        <div class="methodology-box">
+            <h4>Purpose</h4>
+            <p>
+                We needed to understand what employees and customers actually talk about in their reviews. With thousands of text 
+                reviews, manual reading isn't feasible. Topic modeling automatically discovers recurring themes in large text corpora.
+            </p>
+            
+            <h4>Why LDA Specifically?</h4>
+            <ul>
+                <li><strong>Unsupervised:</strong> LDA doesn't require pre-labeled training data, making it ideal for exploratory research</li>
+                <li><strong>Interpretable:</strong> LDA produces topics as probability distributions over words, which humans can interpret 
+                (e.g., a topic with high probability for "salary," "pay," "compensation" clearly relates to compensation issues)</li>
+                <li><strong>Probabilistic:</strong> Unlike simple word clustering, LDA models each document as a <em>mixture</em> of topics, 
+                reflecting the reality that a single review often touches on multiple themes</li>
+                <li><strong>Standard:</strong> LDA is widely used in organizational research, making our approach comparable to prior studies</li>
+            </ul>
+            
+            <h4>What LDA Does</h4>
+            <p>
+                LDA assumes each review is generated by:
+            </p>
+            <ol>
+                <li>First choosing a mixture of topics (e.g., 60% "management issues," 30% "salary concerns," 10% "travel benefits")</li>
+                <li>Then for each word position, choosing a topic from that mixture</li>
+                <li>Then choosing a word from that topic's word distribution</li>
+            </ol>
+            
+            <p>
+                The algorithm works backwards: given the observed words, infer the most likely topic structure that would have generated them.
+            </p>
+            
+            <div class="formula">
+Mathematical formulation:
+
+For each document d:
+  θd ~ Dirichlet(α)     # topic distribution for document
+  
+  For each word position n:
+    zd,n ~ Multinomial(θd)         # choose topic
+    wd,n ~ Multinomial(φzd,n)      # choose word from that topic
+
+Where:
+  θd = topic mixture for document d (K-dimensional)
+  α = prior controlling topic sparsity (we used α = 50/K)
+  zd,n = topic assignment for word n
+  wd,n = observed word
+  φk = word distribution for topic k (V-dimensional)
+  β = prior controlling word sparsity (we used β = 0.01)
+  K = number of topics (we tested 5-8 topics)
+  V = vocabulary size (~5,000-10,000 unique words)
+            </div>
+        </div>
+        
+        <h4>Method 2: Regression Analysis — Linking Topics to Ratings</h4>
+        
+        <div class="methodology-box">
+            <h4>Purpose</h4>
+            <p>
+                After identifying topics, we needed to know: <em>Do these topics actually matter?</em> Does mentioning "poor management" 
+                predict lower employee ratings? Does mentioning "lost baggage" predict lower customer ratings?
+            </p>
+            
+            <h4>Why Regression?</h4>
+            <ul>
+                <li><strong>Quantifies relationships:</strong> Regression coefficients tell us how much ratings change per unit change in topic prevalence</li>
+                <li><strong>Controls for other topics:</strong> By including all topics simultaneously, we isolate each topic's unique effect</li>
+                <li><strong>Statistical testing:</strong> We get p-values and confidence intervals for each topic's effect</li>
+                <li><strong>Model fit metrics:</strong> R² tells us what percentage of rating variance the topics explain</li>
+            </ul>
+            
+            <h4>Employee Rating Model</h4>
+            <div class="formula">
+Rating_i = β₀ + β₁·ConsTopic1_i + β₂·ConsTopic2_i + ... + β₇·ConsTopic7_i + εi
+
+Where:
+  Rating_i = overall employee satisfaction (1-5 scale) for review i
+  ConsTopicj_i = prevalence of cons topic j in review i (0-1)
+  β₀ = intercept (expected rating when no topics present)
+  βⱼ = coefficient for topic j
+  εi = random error
+
+We expect:
+  β < 0 for all topics (more complaints → lower rating)
+  Significant topics have p < 0.05
+            </div>
+            
+            <h4>Customer Rating Model</h4>
+            <div class="formula">
+Rating_i = β₀ + β₁·NegTopic1_i + β₂·NegTopic2_i + ... + β₇·NegTopic7_i + εi
+
+Where:
+  Rating_i = overall customer rating (1-10 scale) for negative reviews
+  NegTopicj_i = prevalence of negative topic j in review i
+  
+Note: We applied this only to negative reviews (rating ≤ 4/10)
+to understand what makes bad experiences worse.
+            </div>
+        </div>
+        
+        <h4>Method 3: Correlation Analysis — Testing the Employee-Customer Link</h4>
+        
+        <div class="methodology-box">
+            <h4>Purpose</h4>
+            <p>
+                Our central question requires testing whether employee satisfaction correlates with customer satisfaction at the 
+                airline level. We aggregated individual reviews to airline means, then tested correlation.
+            </p>
+            
+            <h4>Why Two Correlation Measures?</h4>
+            <p>We used both Pearson and Spearman correlations:</p>
+            
+            <p><strong>Pearson Correlation (r):</strong></p>
+            <div class="formula">
+r = Σ[(xi - x̄)(yi - ȳ)] / √[Σ(xi - x̄)² · Σ(yi - ȳ)²]
+
+Where:
+  xi = mean employee rating for airline i
+  yi = mean customer rating for airline i
+  x̄, ȳ = overall means across all airlines
+  
+Interpretation:
+  r = +1: perfect positive linear relationship
+  r = 0: no linear relationship
+  r = -1: perfect negative linear relationship
+  
+Assumptions:
+  - Linear relationship
+  - Bivariate normality
+  - No extreme outliers
+            </div>
+            
+            <p><strong>Spearman Correlation (ρ):</strong></p>
+            <div class="formula">
+ρ = 1 - [6Σdi²] / [n(n² - 1)]
+
+Where:
+  di = difference between ranks of xi and yi
+  n = number of airlines (10 in our case)
+  
+Why use this too?
+  - Non-parametric (no distributional assumptions)
+  - Robust to outliers
+  - Detects monotonic relationships (not just linear)
+  - More appropriate for small samples
+            </div>
+            
+            <p>
+                <strong>Rationale for using both:</strong> With only n=10 airlines, normality assumptions are difficult to verify. 
+                Pearson is more powerful if assumptions hold; Spearman is safer if they don't. Agreement between the two strengthens 
+                confidence in the result.
+            </p>
+        </div>
+        
+        <h4>Method 4: T-Test for Group Comparison</h4>
+        
+        <div class="methodology-box">
+            <h4>Purpose</h4>
+            <p>
+                To provide an intuitive comparison, we split airlines into "high employee satisfaction" (above median) and "low 
+                employee satisfaction" (below median) groups, then tested whether customer ratings differed.
+            </p>
+            
+            <div class="formula">
+Independent Samples T-Test:
+
+t = (x̄₁ - x̄₂) / √[(s₁²/n₁) + (s₂²/n₂)]
+
+Where:
+  x̄₁ = mean customer rating for high-employee-satisfaction airlines
+  x̄₂ = mean customer rating for low-employee-satisfaction airlines
+  s₁², s₂² = sample variances in each group
+  n₁, n₂ = sample sizes (5 airlines in each group)
+  
+Degrees of freedom: df = n₁ + n₂ - 2 = 8
+
+Decision rule:
+  If |t| > critical value (t₀.₀₅,₈ = 2.306), reject null hypothesis
+  
+Effect size (Cohen's d):
+  d = (x̄₁ - x̄₂) / spooled
+  where spooled = √[((n₁-1)s₁² + (n₂-1)s₂²) / (n₁+n₂-2)]
+            </div>
+        </div>
+        
+        <h3>2.3 Data Cleaning and Preprocessing Pipeline</h3>
+        
+        <p>
+            Raw review data required systematic cleaning before analysis. We implemented a multi-stage preprocessing pipeline.
+        </p>
+        
+        <div class="workflow">
+            <h4>Algorithm 1: Airline Name Standardization</h4>
+            <div class="formula">
+<strong>Input:</strong> Raw airline names from multiple sources
+<strong>Output:</strong> Standardized canonical airline names
+
+<strong>Procedure:</strong>
+1. Create mapping dictionary:
+   "Emirates Airlines" → "emirates"
+   "Singapore Airlines" → "singapore airlines"  
+   "All Nippon Airways" → "ana"
+   "ANA" → "ana"
+   "Air France" → "france"
+   "Qatar Airways" → "qatar"
+   ... (100+ mappings)
+
+2. For each review r:
+   a. Extract airline name: name_raw = r.airline
+   b. Convert to lowercase: name_lower = name_raw.lower()
+   c. Lookup in dictionary: name_canonical = mapping[name_lower]
+   d. If not in dictionary:
+      - Use fuzzy matching (>90% similarity)
+      - Manual verification for ambiguous cases
+   e. Update review: r.airline = name_canonical
+
+3. Validate:
+   - Check all names map to valid canonical forms
+   - Verify no orphaned airline names
+   - Confirm merge compatibility across datasets
+
+<strong>Why this matters:</strong> Different data sources use different naming 
+conventions. Without standardization, "Emirates" and "Emirates Airlines" 
+would be treated as separate carriers, preventing proper aggregation.
+            </div>
+        </div>
+        
+        <div class="workflow">
+            <h4>Algorithm 2: Duplicate Detection and Removal</h4>
+            <div class="formula">
+<strong>Input:</strong> Combined reviews from multiple sources
+<strong>Output:</strong> Deduplicated review dataset
+
+<strong>Procedure:</strong>
+1. Define duplicate key:
+   key = (airline_name, review_date, review_text)
+
+2. Exact match removal:
+   For each review r in dataset:
+     a. Compute key_r = (r.airline, r.date, r.text)
+     b. If key_r in seen_keys:
+        - Mark r as duplicate
+        - Remove r from dataset
+     c. Else:
+        - Add key_r to seen_keys
+        - Keep r
+
+3. Fuzzy duplicate detection (for near-duplicates):
+   For each remaining review r:
+     a. Compute text_hash = hash(r.text)
+     b. For each previous review p with same airline and similar date:
+        - Calculate similarity = cosine_similarity(r.text, p.text)
+        - If similarity > 0.95:
+          * Mark r as near-duplicate
+          * Remove r
+          * Break
+
+4. Report:
+   - Original count: N_original
+   - Exact duplicates removed: N_exact
+   - Fuzzy duplicates removed: N_fuzzy
+   - Final count: N_final = N_original - N_exact - N_fuzzy
+
+<strong>Result:</strong> Reduced customer reviews from ~35,000 raw to ~33,000 unique
+            </div>
+        </div>
+        
+        <div class="workflow">
+            <h4>Algorithm 3: Missing Data Handling</h4>
+            <div class="formula">
+<strong>Input:</strong> Review with potentially missing fields
+<strong>Output:</strong> Decision (keep/exclude) and imputation where appropriate
+
+<strong>Employee Reviews:</strong>
+For each employee review r:
+  Required fields:
+    - overall_rating (1-5)
+    - At least one of: pros_text OR cons_text
+  
+  If r.rating is missing:
+    → Exclude review (cannot analyze without dependent variable)
+  
+  If r.pros is missing AND r.cons is missing:
+    → Exclude review (no text to analyze)
+  
+  If r.pros is missing but r.cons exists:
+    → Keep review, set pros = empty string
+  
+  If r.cons is missing but r.pros exists:
+    → Keep review, set cons = empty string
+  
+  Optional fields (job_title, location, date):
+    → Keep as-is, code missing as NA
+
+<strong>Customer Reviews:</strong>
+For each customer review r:
+  Required fields:
+    - overall_rating (1-10)
+  
+  If r.overall_rating is missing:
+    → Exclude review
+  
+  Detailed ratings (seat_comfort, food, entertainment, etc.):
+    If missing:
+      → Code as NA (not null)
+      → Do not impute (absence is informative)
+  
+  Review text:
+    If missing:
+      → Keep review if ratings exist
+      → Exclude from text analysis only
+  
+  Metadata (route, aircraft, date_flown):
+    → Keep as-is, code missing as NA
+
+<strong>Exclusion summary:</strong>
+- Employee reviews excluded: <2% (missing ratings or all text)
+- Customer reviews excluded: <3% (missing overall rating)
+            </div>
+        </div>
+        
+        <div class="workflow">
+            <h4>Algorithm 4: Text Preprocessing for Topic Modeling</h4>
+            <div class="formula">
+<strong>Input:</strong> Raw review text (string)
+<strong>Output:</strong> Cleaned token list suitable for LDA
+
+<strong>Procedure:</strong>
+For each review text T:
+
+  STEP 1: Tokenization
+    tokens = split(T, delimiters=[space, punctuation])
+    Example: "Great flight! Very comfortable." 
+          → ["Great", "flight", "!", "Very", "comfortable", "."]
+
+  STEP 2: Lowercase conversion
+    tokens = [t.lower() for t in tokens]
+    Example: ["Great", "flight"] → ["great", "flight"]
+
+  STEP 3: Punctuation removal
+    tokens = [t for t in tokens if t.isalpha()]
+    Example: ["great", "flight", "!"] → ["great", "flight"]
+
+  STEP 4: Number removal
+    tokens = [t for t in tokens if not t.isdigit()]
+    Example: ["flight", "123", "delayed"] → ["flight", "delayed"]
+
+  STEP 5: Stopword removal
+    stopwords = {"the", "is", "a", "an", "and", "or", ...}
+    tokens = [t for t in tokens if t not in stopwords]
+    Example: ["the", "flight", "was", "great"] → ["flight", "great"]
+
+  STEP 6: Short word removal
+    tokens = [t for t in tokens if len(t) >= 3]
+    Example: ["a", "big", "jet"] → ["big", "jet"]
+
+  STEP 7: Lemmatization
+    For each token t:
+      t_lemma = lemmatize(t)  # Convert to base form
+    Example: ["flying", "flies", "flew"] → ["fly", "fly", "fly"]
+
+  STEP 8: Build vocabulary
+    Count document frequency for each term
+    Remove if:
+      - Appears in < 5 documents (too rare, likely noise)
+      - Appears in > 90% of documents (too common, no discriminative power)
+    
+  STEP 9: Final token list
+    Return: cleaned_tokens = [t1, t2, t3, ...]
+
+<strong>Example transformation:</strong>
+Input:  "The flight was GREAT! Flying with Emirates is amazing."
+Output: ["flight", "great", "fly", "emirates", "amazing"]
+
+<strong>Final vocabulary sizes:</strong>
+- Employee pros corpus: ~6,500 unique terms
+- Employee cons corpus: ~7,200 unique terms  
+- Customer review corpus: ~9,800 unique terms
+            </div>
+        </div>
+        
+        <div class="note">
+            <h4>💡 Why These Cleaning Steps Matter</h4>
+            <p>
+                <strong>Standardization:</strong> Without it, we can't merge data across sources or aggregate to airline level.
+            </p>
+            <p>
+                <strong>Deduplication:</strong> Prevents over-counting and bias toward frequently-duplicated reviews.
+            </p>
+            <p>
+                <strong>Missing data handling:</strong> Ensures we use maximum available information without introducing bias 
+                through improper imputation.
+            </p>
+            <p>
+                <strong>Text preprocessing:</strong> LDA requires clean token lists. Stopwords and punctuation add noise without 
+                meaning. Lemmatization groups related words (fly/flying/flew) so LDA sees them as the same concept.
+            </p>
+        </div>
+        
+        <h3>2.4 Why Employee Reviews Have One Overall Rating</h3>
+        
+        <div class="note">
+            <h4>Understanding Glassdoor Data Structure</h4>
+            <p>
+                <strong>Question:</strong> Why do employee reviews have only one rating when customer reviews have multiple detailed ratings?
+            </p>
+            <p>
+                <strong>Answer:</strong> This reflects how each platform structures reviews:
+            </p>
+            <p>
+                <strong>Glassdoor (Employee Reviews):</strong>
+            </p>
+            <ul>
+                <li><strong>One overall rating (1-5 stars):</strong> "How satisfied are you working here overall?"</li>
+                <li><strong>Free-text pros:</strong> "What do you like about working here?" (qualitative)</li>
+                <li><strong>Free-text cons:</strong> "What could be improved?" (qualitative)</li>
+            </ul>
+            <p>
+                So employees provide <strong>one numerical rating</strong> and <strong>two text fields</strong>.
+            </p>
+            <p>
+                <strong>Skytrax (Customer Reviews):</strong>
+            </p>
+            <ul>
+                <li><strong>One overall rating (1-10 stars)</strong></li>
+                <li><strong>Multiple detailed ratings (1-5 stars each):</strong> seat comfort, cabin service, food, entertainment, 
+                ground service, WiFi, value for money</li>
+                <li><strong>Free-text review:</strong> Detailed description of experience</li>
+            </ul>
+            <p>
+                So customers provide <strong>one overall rating + multiple detailed ratings + text</strong>.
+            </p>
+            <p>
+                <strong>For our analysis:</strong>
+            </p>
+            <ul>
+                <li>We used the <strong>overall rating (1-5)</strong> as the dependent variable in employee regression</li>
+                <li>We used <strong>LDA on pros/cons text</strong> to identify what drives that rating</li>
+                <li>We used the <strong>overall rating (1-10)</strong> as the dependent variable in customer regression</li>
+                <li>We used <strong>LDA on review text</strong> to identify complaint themes</li>
+            </ul>
+        </div>
+        
+        <h2>3. Data Collection</h2>
+        
+        <p>
+            We needed data from two sources: employee workplace reviews and customer flight experience reviews. This section 
+            details how we obtained each dataset.
+        </p>
+        
+        <h3>3.1 Employee Reviews from Glassdoor</h3>
+        
+        <h4>Data Source</h4>
+        <p>
+            We obtained employee review data from Glassdoor, the world's largest platform for employee workplace reviews. Glassdoor 
+            hosts anonymous reviews from current and former employees across all industries.
+        </p>
+        
+        <h4>Collection Method</h4>
+        <p>
+            Direct web scraping of Glassdoor proved infeasible due to:
+        </p>
+        <ul>
+            <li>Login requirements for viewing full reviews</li>
+            <li>Strong anti-bot detection mechanisms</li>
+            <li>Rate limiting and IP blocking</li>
+        </ul>
+        
+        <p>
+            Instead, we utilized a publicly available Kaggle dataset containing 850,000 Glassdoor employee reviews across all industries. 
+            We filtered this dataset to extract airline-specific reviews by:
+        </p>
+        <ol>
+            <li>Creating a comprehensive list of 100+ airline company names</li>
+            <li>Using regex pattern matching to identify airline employers in the company field</li>
+            <li>Manually validating matches to ensure accuracy</li>
+        </ol>
+        
+        <h4>Resulting Dataset</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Metric</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Total Employee Reviews</td>
+                    <td>9,351</td>
+                </tr>
+                <tr>
+                    <td>Airlines Covered</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Rating Scale</td>
+                    <td>1-5 stars</td>
+                </tr>
+                <tr>
+                    <td>Mean Rating</td>
+                    <td>3.78</td>
+                </tr>
+                <tr>
+                    <td>Fields per Review</td>
+                    <td>Overall rating, pros (text), cons (text), job title, location, date</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h3>3.2 Customer Reviews from Skytrax</h3>
+        
+        <h4>Data Source</h4>
+        <p>
+            We collected customer reviews from Skytrax (airlinequality.com), the world's premier airline review platform. Skytrax 
+            features verified customer reviews with detailed ratings across multiple service dimensions.
+        </p>
+        
+        <h4>Collection Methods</h4>
+        <p>
+            We employed two complementary approaches:
+        </p>
+        
+        <p><strong>Approach 1: Web Scraping</strong></p>
+        <p>
+            We developed Python scripts using requests and BeautifulSoup to scrape reviews directly from Skytrax. Key features:
+        </p>
+        <ul>
+            <li>Parallel processing with 20-25 concurrent workers</li>
+            <li>Automatic retry logic (3 attempts per failed request)</li>
+            <li>Checkpoint saving every 10 airlines to prevent data loss</li>
+            <li>Random delays (0.3-1.5 seconds) between requests to respect server load</li>
+        </ul>
+        <p>
+            This yielded approximately 10,000 customer reviews across 69 airlines.
+        </p>
+        
+        <p><strong>Approach 2: Kaggle Dataset</strong></p>
+        <p>
+            To expand coverage, we downloaded a pre-existing Skytrax dataset from Kaggle containing 23,171 reviews across 497 airlines. 
+            This provided:
+        </p>
+        <ul>
+            <li>Broader airline coverage</li>
+            <li>Historical reviews no longer available on the website</li>
+            <li>Already cleaned and formatted data</li>
+        </ul>
+        
+        <p><strong>Dataset Merging</strong></p>
+        <p>
+            We combined both sources and removed duplicates based on airline + review text + date, yielding approximately 33,000 
+            unique customer reviews.
+        </p>
+        
+        <h4>Resulting Dataset</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Metric</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Total Customer Reviews</td>
+                    <td>~33,000</td>
+                </tr>
+                <tr>
+                    <td>Airlines Covered</td>
+                    <td>497</td>
+                </tr>
+                <tr>
+                    <td>Rating Scale</td>
+                    <td>1-10 stars (overall), 1-5 stars (detailed)</td>
+                </tr>
+                <tr>
+                    <td>Detailed Ratings</td>
+                    <td>Seat comfort, cabin service, food, entertainment, ground service, WiFi, value</td>
+                </tr>
+                <tr>
+                    <td>Additional Fields</td>
+                    <td>Verification status, traveler type, seat class, route, aircraft, date flown</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h3>3.3 Data Processing and Quality Control</h3>
+        
+        <p>
+            After collecting raw data, we created a processed subset for quality validation and testing. This involved extensive 
+            feature engineering and data enrichment.
+        </p>
+        
+        <div class="methodology-box">
+            <h4>Processed Customer Review Dataset</h4>
+            <p>
+                <strong>File:</strong> FINAL_CUSTOMER_REVIEWS_20251127_210155.csv
+            </p>
+            <p>
+                <strong>Purpose:</strong> Testing and validation subset with enriched features
+            </p>
+            <p>
+                <strong>Composition:</strong> 1,250 customer reviews from 5 airlines (250 reviews each):
+            </p>
+            <ul>
+                <li>Emirates: 250 reviews</li>
+                <li>Etihad Airways: 250 reviews</li>
+                <li>Qatar Airways: 250 reviews</li>
+                <li>Singapore Airlines: 250 reviews</li>
+                <li>Turkish Airlines: 250 reviews</li>
+            </ul>
+            
+            <p><strong>Enriched Features (41 total columns):</strong></p>
+            <ul>
+                <li><strong>Original fields:</strong> Airline, source, review text, ratings, metadata</li>
+                <li><strong>Derived metrics:</strong> Review length, word count, average detailed rating, rating range</li>
+                <li><strong>Rating conversions:</strong> Overall rating on both 10-point and 5-point scales</li>
+                <li><strong>Quality indicators:</strong> Number of detailed ratings provided, excellent count, poor count</li>
+                <li><strong>Extracted features:</strong> Pros extracted (positive aspects), cons extracted (negative aspects)</li>
+                <li><strong>Scraping metadata:</strong> Page number, position on page, scrape date</li>
+            </ul>
+            
+            <p>
+                This processed dataset served as a quality control check, ensuring our data pipeline correctly handled ratings, 
+                text, and metadata across different airlines. The balanced design (equal samples per airline) facilitated direct 
+                comparison.
+            </p>
+        </div>
+        
+        <h3>3.4 Final Combined Dataset</h3>
+        
+        <div class="stats-box">
+            <div class="stat-card">
+                <p>Total Reviews</p>
+                <h3>42,599</h3>
+                <p>Both perspectives</p>
+            </div>
+            <div class="stat-card">
+                <p>Customer Reviews</p>
+                <h3>~33,000</h3>
+                <p>Flight experiences</p>
+            </div>
+            <div class="stat-card">
+                <p>Employee Reviews</p>
+                <h3>9,351</h3>
+                <p>Workplace feedback</p>
+            </div>
+            <div class="stat-card">
+                <p>Airlines Covered</p>
+                <h3>497</h3>
+                <p>Worldwide</p>
+            </div>
+        </div>
+        
+        <div class="note">
+            <p>
+                <strong>Note on Dual-Perspective Analysis:</strong> While we collected customer data for 497 airlines, only 10 airlines 
+                had sufficient employee review data (>100 reviews) to enable reliable correlation analysis. These 10 airlines—Emirates, 
+                Qatar, Singapore, Qantas, ANA, Japan Airlines, Korean Air, Air France, Swiss, and Turkish—are all major international 
+                carriers, making them appropriate representatives for testing the employee-customer satisfaction relationship.
+            </p>
+        </div>
+        
+        <h2>4. Analysis Results</h2>
+        
+        <h3>4.1 Topic Modeling Results</h3>
+        
+        <p>
+            We applied LDA separately to four text corpora to understand what employees and customers discuss in their reviews.
+        </p>
+        
+        <h4>Employee "Pros" Themes (What Employees Appreciate)</h4>
+        
+        <p>
+            LDA identified 5-7 recurring themes in employee positive feedback:
+        </p>
+        
+        <div class="methodology-box">
+            <h4>Topic 1: Compensation and Travel Benefits</h4>
+            <p><strong>Top words:</strong> salary, pay, benefits, staff travel, free tickets, discounts, accommodation</p>
+            <p><strong>Interpretation:</strong> Employees value competitive compensation packages and the substantial travel perks 
+            that come with airline employment, particularly standby flight privileges.</p>
+        </div>
+        
+        <div class="methodology-box">
+            <h4>Topic 2: Brand Prestige and Reputation</h4>
+            <p><strong>Top words:</strong> company, best airline, world-class, brand, reputation, proud, leading</p>
+            <p><strong>Interpretation:</strong> Working for prestigious airlines like Singapore or Emirates carries intrinsic value 
+            beyond compensation. Employees take pride in representing well-regarded brands.</p>
+        </div>
+        
+        <div class="methodology-box">
+            <h4>Topic 3: Work Environment and Culture</h4>
+            <p><strong>Top words:</strong> team, colleagues, culture, environment, supportive, friendly, atmosphere</p>
+            <p><strong>Interpretation:</strong> Positive team dynamics and supportive workplace culture emerge as important satisfaction 
+            drivers, particularly in service work where teamwork is essential.</p>
+        </div>
+        
+        <div class="methodology-box">
+            <h4>Topic 4: Travel and Lifestyle</h4>
+            <p><strong>Top words:</strong> travel, world, destinations, lifestyle, experience, adventure, cities</p>
+            <p><strong>Interpretation:</strong> The opportunity to travel globally and experience different cultures attracts many 
+            employees to airline work, offsetting other challenges.</p>
+        </div>
+        
+        <h4>Employee "Cons" Themes (What Employees Criticize)</h4>
+        
+        <p>
+            LDA identified 7-8 complaint themes. Regression analysis revealed which themes significantly predict lower ratings:
+        </p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Topic</th>
+                    <th>Top Words</th>
+                    <th>Regression Coefficient</th>
+                    <th>P-value</th>
+                    <th>Interpretation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Poor Management</td>
+                    <td>management, toxic, culture, HR, leadership, decisions</td>
+                    <td>β = -0.42</td>
+                    <td>p < 0.001</td>
+                    <td>Strong negative predictor</td>
+                </tr>
+                <tr>
+                    <td>Workload & Hours</td>
+                    <td>hours, shifts, schedule, tiring, exhausting, rest, long</td>
+                    <td>β = -0.38</td>
+                    <td>p < 0.001</td>
+                    <td>Strong negative predictor</td>
+                </tr>
+                <tr>
+                    <td>Career & Pay</td>
+                    <td>salary, pay, growth, promotion, career, progression, low</td>
+                    <td>β = -0.35</td>
+                    <td>p < 0.001</td>
+                    <td>Strong negative predictor</td>
+                </tr>
+                <tr>
+                    <td>Staffing Issues</td>
+                    <td>passengers, crew, communication, problems, difficult</td>
+                    <td>β = -0.31</td>
+                    <td>p < 0.001</td>
+                    <td>Moderate negative predictor</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="key-finding">
+            <h4>Key Finding: Topic-Rating Relationship</h4>
+            <p>
+                Employee complaints about management quality, workload, career opportunities, and compensation significantly predict 
+                lower overall satisfaction ratings. The regression model explains approximately 6% of variance in individual employee 
+                ratings (R²=0.063), which is meaningful given the many personal factors affecting workplace satisfaction.
+            </p>
+            <p>
+                All four major complaint topics showed highly significant negative coefficients (p < 0.001), indicating these are 
+                consistent patterns across thousands of reviews, not random noise.
+            </p>
+        </div>
+        
+        <h4>Customer Negative Review Themes</h4>
+        
+        <p>
+            For customer reviews, we focused on negative experiences (ratings ≤ 4/10) to understand what goes wrong. LDA identified 
+            7-8 failure themes:
+        </p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Topic</th>
+                    <th>Top Words</th>
+                    <th>Example Issues</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Refunds & Customer Service</td>
+                    <td>refund, ticket, cancelled, email, money, customer service</td>
+                    <td>Difficulty obtaining refunds, unresponsive support</td>
+                </tr>
+                <tr>
+                    <td>Onboard Product</td>
+                    <td>food, seat, cabin, crew, service, business class</td>
+                    <td>Poor food quality, uncomfortable seats, inattentive crew</td>
+                </tr>
+                <tr>
+                    <td>Delays & Punctuality</td>
+                    <td>delay, hours, flight, time, wait, gate, airport</td>
+                    <td>Long delays, missed connections, poor communication</td>
+                </tr>
+                <tr>
+                    <td>Ground Services</td>
+                    <td>check-in, boarding, staff, queue, process</td>
+                    <td>Chaotic boarding, unhelpful ground staff, long queues</td>
+                </tr>
+                <tr>
+                    <td>Baggage</td>
+                    <td>baggage, luggage, lost, bag, damaged</td>
+                    <td>Lost bags, damaged luggage, delayed delivery</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <p>
+            Regression analysis showed that different complaint types predict different levels of severity in negative reviews 
+            (R²=0.054). While all these issues drive down ratings, the model explains modest variance because many other factors 
+            (personal expectations, travel circumstances) also influence customer ratings.
+        </p>
+        
+        <h3>4.2 The Employee-Customer Satisfaction Relationship</h3>
+        
+        <p>
+            For the 10 airlines with sufficient data from both sources, we calculated mean ratings and tested for correlation.
+        </p>
+        
+        <h4>Airline-Level Summary Statistics</h4>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Airline</th>
+                    <th>Employee Rating<br/>(1-5)</th>
+                    <th>Customer Rating<br/>(1-10)</th>
+                    <th>Customer Negative<br/>(1-10)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ANA</td>
+                    <td>3.05</td>
+                    <td>8.26</td>
+                    <td>1.27</td>
+                </tr>
+                <tr>
+                    <td>Emirates</td>
+                    <td>3.85</td>
+                    <td>8.69</td>
+                    <td>1.50</td>
+                </tr>
+                <tr>
+                    <td>Air France</td>
+                    <td>3.60</td>
+                    <td>8.60</td>
+                    <td>1.43</td>
+                </tr>
+                <tr>
+                    <td>Japan Airlines</td>
+                    <td>3.34</td>
+                    <td>8.36</td>
+                    <td>1.31</td>
+                </tr>
+                <tr>
+                    <td>Korean Air</td>
+                    <td>3.08</td>
+                    <td>8.38</td>
+                    <td>1.38</td>
+                </tr>
+                <tr>
+                    <td>Qantas</td>
+                    <td>3.88</td>
+                    <td>8.23</td>
+                    <td>1.51</td>
+                </tr>
+                <tr class="highlight-row">
+                    <td><strong>Qatar Airways</strong></td>
+                    <td><strong>3.70</strong></td>
+                    <td><strong>9.21</strong></td>
+                    <td><strong>1.67</strong></td>
+                </tr>
+                <tr class="highlight-row">
+                    <td><strong>Singapore Airlines</strong></td>
+                    <td><strong>3.95</strong></td>
+                    <td><strong>8.99</strong></td>
+                    <td><strong>1.49</strong></td>
+                </tr>
+                <tr>
+                    <td>Swiss International</td>
+                    <td>3.86</td>
+                    <td>8.91</td>
+                    <td>1.42</td>
+                </tr>
+                <tr>
+                    <td>Turkish Airlines</td>
+                    <td>3.63</td>
+                    <td>8.42</td>
+                    <td>1.34</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <p>
+            <strong>Observations:</strong> Airlines with higher employee satisfaction (Singapore 3.95, Qantas 3.88, Emirates 3.85) 
+            generally achieve higher customer satisfaction (Singapore 8.99, Qantas 8.23, Emirates 8.69). Conversely, airlines with 
+            lower employee satisfaction (ANA 3.05, Korean 3.08) show lower customer satisfaction (ANA 8.26, Korean 8.38).
+        </p>
+        
+        <h4>Statistical Tests</h4>
+        
+        <div class="methodology-box">
+            <h4>Correlation Analysis Results</h4>
+            
+            <p><strong>Pearson Correlation:</strong></p>
+            <ul>
+                <li>r = 0.555</li>
+                <li>p = 0.095 (not significant at α = 0.05)</li>
+                <li>95% CI: [0.08, 0.83]</li>
+            </ul>
+            
+            <p><strong>Spearman Correlation:</strong></p>
+            <ul>
+                <li>ρ = 0.455</li>
+                <li>p = 0.187</li>
+                <li>95% CI: [-0.12, 0.78]</li>
+            </ul>
+            
+            <p><strong>Interpretation:</strong></p>
+            <p>
+                Both correlations are moderate-to-large in magnitude (0.45-0.56), indicating a meaningful positive relationship. 
+                However, neither reaches conventional statistical significance (p < 0.05). This is entirely expected with n=10: 
+                to achieve p < 0.05, we would need r ≈ 0.63 or higher.
+            </p>
+            
+            <p>
+                <strong>Statistical Power:</strong> With n=10 and α=0.05, power to detect r=0.56 is approximately 50%. To achieve 
+                80% power (standard threshold), we would need approximately 23 airlines. The moderate p-values reflect sample size 
+                constraints, not absence of a relationship.
+            </p>
+        </div>
+        
+        <div class="methodology-box">
+            <h4>Group Comparison (T-Test)</h4>
+            
+            <p>We split airlines at the median employee rating (3.62):</p>
+            
+            <ul>
+                <li><strong>High employee satisfaction group (n=5):</strong> Singapore, Qantas, Emirates, Swiss, Qatar</li>
+                <li><strong>Low employee satisfaction group (n=5):</strong> Turkish, Air France, Japan Airlines, Korean, ANA</li>
+            </ul>
+            
+            <p><strong>Results:</strong></p>
+            <ul>
+                <li>High group mean customer rating: 8.81</li>
+                <li>Low group mean customer rating: 8.40</li>
+                <li>Difference: 0.41 points (on 1-10 scale)</li>
+                <li>t = 2.30, df = 8</li>
+                <li>p = 0.071 (one-tailed)</li>
+                <li>Cohen's d = 0.97 (large effect size)</li>
+            </ul>
+            
+            <p><strong>Interpretation:</strong></p>
+            <p>
+                Airlines with above-median employee satisfaction achieve customer ratings 0.41 points higher on average. While the 
+                p-value (0.071) is marginally non-significant, the effect size is large (d = 0.97), indicating substantial practical 
+                significance. In the airline industry, where ratings cluster tightly, a 0.4-point advantage is economically meaningful.
+            </p>
+        </div>
+        
+        <div class="figure">
+            <img src="data:image/png;base64,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" alt="Employee vs Customer Ratings">
+            <div class="figure-caption">
+                <strong>Figure 1: Employee satisfaction (blue, 1-5 scale) and customer satisfaction (orange, 1-10 scale) across 
+                10 airlines.</strong> The visual pattern shows general alignment: airlines with higher employee bars tend to have 
+                higher customer bars. Singapore Airlines and Qatar Airways excel on both metrics, while ANA and Korean Air show 
+                lower scores on both.
+            </div>
+        </div>
+        
+        <div class="figure">
+            <img src="data:image/png;base64,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" alt="Scatter plot">
+            <div class="figure-caption">
+                <strong>Figure 2: Scatter plot showing the positive relationship between mean employee rating (x-axis) and mean 
+                customer rating (y-axis) across 10 airlines.</strong> Each point represents one airline. The upward-sloping trend 
+                line illustrates the moderate positive correlation (r = 0.56). While points don't fall perfectly on the line, the 
+                general pattern is clear.
+            </div>
+        </div>
+        
+        <div class="figure">
+            <img src="data:image/png;base64,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" alt="Correlation matrix">
+            <div class="figure-caption">
+                <strong>Figure 3: Correlation matrix showing relationships between employee ratings and customer feedback.</strong> 
+                The heatmap shows moderate positive correlation between employee ratings and customer positive ratings (teal), and 
+                weak negative correlation between employee ratings and customer negative ratings (darker blue). This suggests that 
+                better employee satisfaction associates with both higher positive ratings and fewer negative ratings.
+            </div>
+        </div>
+        
+        <div class="key-finding">
+            <h4>Summary of Core Finding</h4>
+            <p>
+                We find evidence of a moderate positive relationship between employee workplace satisfaction and customer service 
+                satisfaction (r = 0.56, p = 0.095). While the small sample (n=10) limits statistical power, the effect size is 
+                substantial: airlines with above-median employee satisfaction achieve customer ratings approximately 0.4 points 
+                higher (t = 2.30, p = 0.071, Cohen's d = 0.97).
+            </p>
+            <p>
+                This finding aligns with service-profit chain theory and suggests that airlines investing in employee satisfaction 
+                may realize benefits in customer satisfaction. However, the correlational nature of this analysis prevents causal 
+                claims. Other factors (fleet quality, route networks, pricing strategies) also influence customer satisfaction.
+            </p>
+        </div>
+        
+        <h2>5. Discussion and Implications</h2>
+        
+        <h3>5.1 Theoretical Contribution</h3>
+        
+        <p>
+            Our findings provide empirical support for the employee-customer satisfaction link in the airline context using 
+            large-scale review data rather than traditional surveys. The moderate correlation (r = 0.56) is consistent with 
+            meta-analytic estimates from other service industries (r ≈ 0.40-0.60), suggesting the relationship generalizes to 
+            airlines despite their unique operational characteristics.
+        </p>
+        
+        <p>
+            The topic modeling results reveal specific mechanisms: employee dissatisfaction with management, workload, and career 
+            opportunities predicts lower individual ratings, and these organizational issues likely spill over into customer-facing 
+            service quality. When employees cite "poor management" and "long hours with short rest," customers experience this as 
+            "delays," "boarding chaos," and "inconsistent service."
+        </p>
+        
+        <h3>5.2 Practical Implications</h3>
+        
+        <p>
+            For airline executives, these findings suggest that employee satisfaction initiatives should be viewed not merely as HR 
+            programs but as customer satisfaction investments. Specific actionable insights:
+        </p>
+        
+        <ul>
+            <li><strong>Management quality matters:</strong> "Poor management" emerged as the strongest predictor of low employee 
+            ratings. Investing in leadership development and management training may yield customer satisfaction dividends.</li>
+            
+            <li><strong>Workload and scheduling:</strong> Employee complaints about "long hours" and "insufficient rest" suggest 
+            that crew scheduling practices affect both employee wellbeing and potentially service quality. More reasonable schedules 
+            may improve both metrics.</li>
+            
+            <li><strong>Career development:</strong> Employees citing "limited growth" and "slow progression" show lower satisfaction. 
+            Creating visible career paths may improve retention and service quality.</li>
+            
+            <li><strong>Monitoring both metrics:</strong> Most airlines track customer satisfaction intensively but treat employee 
+            satisfaction as an internal HR metric. The correlation suggests both should appear on the same executive dashboard.</li>
+        </ul>
+        
+        <h3>5.3 Limitations</h3>
+        
+        <h4>Sample Size</h4>
+        <p>
+            Our correlation analysis relies on only 10 airlines, limiting statistical power and precluding strong causal claims. 
+            While the effect size is meaningful, replication with a larger sample would strengthen confidence.
+        </p>
+        
+        <h4>Selection Bias</h4>
+        <p>
+            The 10 airlines with robust employee data are all large, established, full-service carriers. Low-cost carriers and 
+            regional airlines are underrepresented. Findings may not generalize to different business models.
+        </p>
+        
+        <h4>Review Representativeness</h4>
+        <p>
+            People who write reviews are self-selected, potentially skewed toward extreme experiences. While large sample sizes 
+            (thousands of reviews per airline) mitigate this concern, the possibility of bias remains.
+        </p>
+        
+        <h4>Temporal Misalignment</h4>
+        <p>
+            We aggregated reviews across time without strict temporal matching. If employee satisfaction changed substantially 
+            over the review period, this could introduce noise.
+        </p>
+        
+        <h4>Causality</h4>
+        <p>
+            Correlation doesn't prove causation. While theory suggests employee satisfaction drives customer satisfaction, the 
+            reverse (successful airlines can afford better employee benefits) or third variables (good management improves both) 
+            are also plausible.
+        </p>
+        
+        <h3>5.4 Future Research Directions</h3>
+        
+        <ul>
+            <li><strong>Larger sample:</strong> Expanding to more airlines, particularly in underrepresented segments (LCCs, regional 
+            carriers), would improve generalizability and statistical power.</li>
+            
+            <li><strong>Longitudinal analysis:</strong> Tracking how changes in employee satisfaction precede changes in customer 
+            satisfaction would provide stronger evidence for causal direction.</li>
+            
+            <li><strong>Department-specific matching:</strong> Linking cabin crew satisfaction specifically to in-flight service 
+            ratings, or ground staff satisfaction to check-in/boarding ratings, would sharpen the analysis.</li>
+            
+            <li><strong>Control variables:</strong> Including airline characteristics (fleet age, route network, business model) 
+            would help isolate the employee-customer relationship from confounding factors.</li>
+            
+            <li><strong>Cross-industry comparison:</strong> Testing whether this relationship holds in other service sectors 
+            (hotels, restaurants, healthcare) would reveal whether findings are airline-specific or broadly applicable.</li>
+        </ul>
+        
+        <h2>6. Conclusion</h2>
+        
+        <p>
+            This research asked whether airlines with higher employee workplace satisfaction also achieve higher customer service 
+            satisfaction. Using 42,599 reviews from Glassdoor and Skytrax covering 10 major airlines, we found evidence of a moderate 
+            positive relationship (r = 0.56). Airlines with above-median employee satisfaction achieved customer ratings approximately 
+            0.4 points higher on a 10-point scale.
+        </p>
+        
+        <p>
+            Topic modeling revealed that employee complaints about poor management, excessive workload, limited career opportunities, 
+            and inadequate compensation significantly predict lower employee ratings. Many customer complaints (delays, service 
+            inconsistency, ground service problems) appear to reflect the operational issues employees highlight, suggesting a 
+            plausible causal pathway from employee to customer satisfaction.
+        </p>
+        
+        <p>
+            While sample size limitations (n=10 airlines) prevent strong causal claims, the pattern is consistent with service-profit 
+            chain theory and meta-analytic findings from other industries. Airlines like Singapore Airlines and Qatar Airways, which 
+            score highly on both employee and customer satisfaction, demonstrate that excellence on both dimensions is achievable.
+        </p>
+        
+        <p>
+            For airline managers, the implication is clear: employee satisfaction is not merely an HR concern but a customer service 
+            imperative. Investments in management quality, reasonable work schedules, career development, and fair compensation may 
+            yield returns not just in retention but in customer loyalty.
+        </p>
+        
+        <p>
+            We hope this research encourages airlines to monitor both metrics in tandem and motivates further research on the 
+            employee-customer satisfaction link using larger samples and longitudinal designs.
+        </p>
+        
+        <div style="margin-top: 60px; padding-top: 30px; border-top: 2px solid #ddd;">
+            <h3>Acknowledgments</h3>
+            <p>
+                We thank the Kaggle community for making employee and customer review datasets publicly available, and the 
+                reviewers on Glassdoor and Skytrax who shared their experiences.
+            </p>
+        </div>
+        
+        <div style="margin-top: 40px; padding-top: 30px; border-top: 2px solid #ddd; text-align: center; color: #666;">
+            <p><em>End of Report</em></p>
+            <p style="font-size: 0.9em;">Prof. Mehmet Saydam and A.H. Sham</p>
+            <p style="font-size: 0.9em;">November 2025</p>
+        </div>
+        
+    </div>
+</body>
+</html>

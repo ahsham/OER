@@ -1,0 +1,142 @@
+[OK] Employee CLEAN: (9351, 8)
+[OK] Employee FULL:  (6133, 20)
+[OK] Global customers: (23171, 20)
+[OK] Fresh customers:  (1250, 41)
+[OK] Ultra customers:  (10077, 18)
+
+Unified customer corpus size: (34498, 3)
+Unique employee airlines (canon, CLEAN): 10
+Unique employee airlines (canon, FULL):  59
+Unique customer airlines (canon):        506
+
+=== LDA on EMPLOYEE PROS: 9351 docs ===
+Topic 0: good, benefits, travel, staff, pay, tickets, colleagues, nice, flight, environment, working, ticket
+Topic 1: company, best, airline, work, good, world, airlines, lot, qatar, emirates, airways, big
+Topic 2: great, benefits, good, brand, travel, company, environment, opportunities, training, staff, career, working
+Topic 3: good, salary, travel, world, benefits, experience, money, destinations, travelling, pay, lifestyle, traveling
+Topic 4: free, travel, accommodation, tickets, benefits, salary, discounts, tax, dubai, paid, provided, discount
+Topic 5: work, good, great, life, people, environment, balance, culture, place, working, nice, team
+Topic 6: employee, travel, flight, lots, working, hours, easy, new, benefit, days, time, places
+Topic 7: people, different, work, new, meet, great, company, learn, job, experience, opportunity, travel
+
+=== LDA on EMPLOYEE CONS: 9351 docs ===
+Topic 0: company, good, cons, work, people, great, job, covid, best, experience, like, bad
+Topic 1: hours, work, working, long, rules, strict, shift, shifts, life, culture, tiring, environment
+Topic 2: work, company, time, people, employees, office, long, don, think, promotion, hard, just
+Topic 3: crew, high, number, management, cabin, just, difficult, like, employees, short, company, rest
+Topic 4: time, family, away, different, jet, home, lag, dubai, life, change, working, really
+Topic 5: salary, low, pay, growth, career, slow, work, progression, limited, salaries, market, benefits
+Topic 6: management, career, poor, culture, managers, work, lack, staff, slow, employees, toxic, hr
+Topic 7: staff, lack, company, years, job, qatar, communication, travel, flight, time, don, work
+
+=== LDA on CUSTOMER POSITIVE: 8246 docs ===
+Topic 0: flight, staff, service, crew, verified, trip, air, airport, time, experience, thank, cabin
+Topic 1: good, food, flight, air, entertainment, service, flights, airline, seats, comfortable, airlines, great
+Topic 2: flight, good, food, time, hours, seats, staff, did, plane, airline, service, just
+Topic 3: flight, check, time, boarding, luggage, airport, minutes, arrived, plane, baggage, seat, bag
+Topic 4: crew, flight, time, cabin, airline, airlines, verified, aegean, service, athens, trip, flights
+Topic 5: flight, time, good, crew, friendly, served, air, short, service, cabin, drinks, aircraft
+Topic 6: class, business, flight, good, seat, service, economy, food, lounge, cabin, seats, crew
+Topic 7: flight, good, service, crew, return, time, cabin, flights, check, friendly, seat, seats
+
+=== LDA on CUSTOMER NEGATIVE: 10000 docs ===
+Topic 0: flight, refund, airline, customer, service, ticket, cancelled, flights, booked, money, trip, change
+Topic 1: flight, food, service, class, crew, business, time, good, cabin, meal, airline, flights
+Topic 2: air, flight, airline, canada, verified, trip, hours, service, airport, time, delayed, berlin
+Topic 3: flight, hours, airport, delayed, time, told, hour, plane, airline, gate, day, delay
+Topic 4: air, flight, staff, check, china, beijing, time, boarding, airport, airline, singapore, bangkok
+Topic 5: luggage, airport, lost, told, service, baggage, days, did, customer, air, email, said
+Topic 6: bag, check, pay, airline, luggage, flight, bags, baggage, extra, carry, just, service
+Topic 7: flight, seat, seats, plane, crew, staff, passengers, cabin, airline, food, air, time
+
+=== MERGED EMPLOYEE + CUSTOMER AIRLINE TABLE ===
+            airline_emp  mean_emp_rating  mean_cust_pos_rating  mean_cust_neg_rating
+25                  ana         3.045872              8.256410              1.271429
+139            emirates         3.851189              8.693182              1.502415
+168              france         3.600962              8.602564              1.430921
+208      japan airlines         3.335766              8.357143              1.311475
+234          korean air         3.076923              8.384615              1.375000
+345              qantas         3.877888              8.232877              1.513514
+346               qatar         3.695508              9.212903              1.674074
+383  singapore airlines         3.945736              8.986047              1.489510
+417               swiss         3.861789              8.913043              1.419355
+454             turkish         3.627685              8.420000              1.344828
+
+Merged airlines count: 10
+
+=== REGRESSION: Employee rating ~ cons topics (reduced) ===
+                            OLS Regression Results
+==============================================================================
+Dep. Variable:                 rating   R-squared:                       0.063
+Model:                            OLS   Adj. R-squared:                  0.062
+Method:                 Least Squares   F-statistic:                     89.90
+Date:                Fri, 28 Nov 2025   Prob (F-statistic):          2.60e-127
+Time:                        01:08:54   Log-Likelihood:                -14494.
+No. Observations:                9351   AIC:                         2.900e+04
+Df Residuals:                    9343   BIC:                         2.906e+04
+Df Model:                           7
+Covariance Type:            nonrobust
+================================================================================
+                   coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------
+const            4.2761      0.047     90.626      0.000       4.184       4.369
+cons_topic_1    -0.0889      0.064     -1.385      0.166      -0.215       0.037
+cons_topic_2    -0.8756      0.074    -11.823      0.000      -1.021      -0.730
+cons_topic_3    -0.7058      0.075     -9.400      0.000      -0.853      -0.559
+cons_topic_4     0.0868      0.075      1.163      0.245      -0.060       0.233
+cons_topic_5    -0.7484      0.069    -10.813      0.000      -0.884      -0.613
+cons_topic_6    -1.1661      0.066    -17.542      0.000      -1.296      -1.036
+cons_topic_7    -0.4849      0.080     -6.065      0.000      -0.642      -0.328
+==============================================================================
+Omnibus:                      747.365   Durbin-Watson:                   1.754
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              942.289
+Skew:                          -0.778   Prob(JB):                    2.42e-205
+Kurtosis:                       2.992   Cond. No.                         13.2
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+=== REGRESSION: Customer rating ~ negative topics (reduced) ===
+                            OLS Regression Results
+==============================================================================
+Dep. Variable:             rating_num   R-squared:                       0.054
+Model:                            OLS   Adj. R-squared:                  0.053
+Method:                 Least Squares   F-statistic:                     173.1
+Date:                Fri, 28 Nov 2025   Prob (F-statistic):          3.11e-250
+Time:                        01:08:54   Log-Likelihood:                -20737.
+No. Observations:               21436   AIC:                         4.149e+04
+Df Residuals:                   21428   BIC:                         4.155e+04
+Df Model:                           7
+Covariance Type:            nonrobust
+===============================================================================
+                  coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------
+const           1.0780      0.014     76.734      0.000       1.050       1.106
+neg_topic_1     0.4494      0.022     20.823      0.000       0.407       0.492
+neg_topic_2     0.2599      0.034      7.680      0.000       0.194       0.326
+neg_topic_3     0.2000      0.022      9.161      0.000       0.157       0.243
+neg_topic_4     0.5483      0.036     15.071      0.000       0.477       0.620
+neg_topic_5     0.2325      0.033      7.154      0.000       0.169       0.296
+neg_topic_6     0.1598      0.023      6.905      0.000       0.114       0.205
+neg_topic_7     0.6637      0.023     28.653      0.000       0.618       0.709
+==============================================================================
+Omnibus:                     4689.654   Durbin-Watson:                   1.886
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             8409.580
+Skew:                           1.449   Prob(JB):                         0.00
+Kurtosis:                       4.006   Cond. No.                         11.6
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+=== CORRELATION: mean_emp_rating vs mean_cust_pos_rating ===
+Pearson r = 0.555, p = 0.0955
+Spearman r = 0.455, p = 0.1869
+
+=== T-TEST: High vs Low Employee Satisfaction on Customer Rating ===
+High-emp airlines mean cust rating: 8.81
+Low-emp  airlines mean cust rating: 8.40
+t = 2.301, p = 0.0705
+
+=== ANALYSIS COMPLETE ===
